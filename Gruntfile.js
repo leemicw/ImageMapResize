@@ -17,6 +17,13 @@ module.exports = function(grunt) {
 			src: 'Source/jquery.ImageMapResize.js',
 			dest: 'Build/jquery.ImageMapResize-<%= pkg.version %>.js'
 		}
+	},
+	zip: {
+		main:{
+			cwd: 'Build/',
+			src: 'Build/*',
+			dest: 'Build/jquery.ImageMapResize-<%= pkg.version %>.zip'
+		}
 	}
   });
 
@@ -26,7 +33,10 @@ module.exports = function(grunt) {
   // Load the plugin that provides the copy task.
   grunt.loadNpmTasks('grunt-contrib-copy');
 
+  // Load the plugin that provides the zip task.
+  grunt.loadNpmTasks('grunt-zip');
+
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'copy']);
+  grunt.registerTask('default', ['uglify', 'copy', 'zip']);
 
 };
