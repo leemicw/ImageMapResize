@@ -11,3 +11,4 @@ To Do
 ------------
 
  * Finish setting up build process to automatically create the examples folder in the zip file. 
+ * Create Nuget Package for Easy Installation
