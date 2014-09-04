@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Map Resize Example</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="../Source/jquery.ImageMapResize.js" type="text/javascript"></script> 
+
+    <style type="text/css">
+      #divImgContainer img{
+        width:100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header><h1>Image Map Resize Example</h1></header>
+      <div id="divImgContainer">
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $('#sampleShapes').ImageMapResize({ origImageWidth: "800" });
+          });
+        </script>
+        <img id="sampleShapes" src="images/SampleShapes.gif" alt="Image Map Sample" usemap="#sampleShapesMap" />
+        <map name="sampleShapesMap">
+          <area shape="rect" alt="" title="" coords="100,112,192,184" href="http://www.google.com" />
+          <area shape="circle" alt="" title="" coords="355,148,55" href="http://www.bing.com" />
+          <area shape="poly" alt="" title="" coords="564,95,537,153,558,207,614,233,668,214,694,159,677,103,618,77,598" href="http://www.yahoo.com" />
+          <!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index) -->
+        </map>
+      </div>
+    </div>
+  </body>
+</html>
+
